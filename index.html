@@ -4,9 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tulipas para Ela</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 </head>
 <body>
-  <h1>Um Campo de Tulipas</h1>
-  <p>Essa página foi feita com carinho para você!</p>
+  <script>
+    function setup() {
+      createCanvas(400, 400);
+      background(200, 230, 255); // Fundo azul claro
+      
+      // Desenhar caule
+      stroke(34, 139, 34);
+      strokeWeight(10);
+      line(200, 300, 200, 200);
+      
+      // Desenhar pétalas da tulipa
+      fill(255, 0, 127);
+      noStroke();
+      ellipse(200, 180, 50, 50); // Pétala superior
+      ellipse(180, 190, 50, 50); // Pétala esquerda
+      ellipse(220, 190, 50, 50); // Pétala direita
+    }
+  </script>
 </body>
 </html>
