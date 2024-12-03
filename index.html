@@ -11,19 +11,43 @@
     function setup() {
       createCanvas(400, 400);
       background(200, 230, 255); // Fundo azul claro
-      
-      // Desenhar caule
-      stroke(34, 139, 34);
-      strokeWeight(10);
-      line(200, 300, 200, 200);
-      
-      // Desenhar pétalas da tulipa
+
+      // Desenhar o chão
+      fill(124, 252, 0);
+      noStroke();
+      rect(0, 300, width, 100); 
+
+      // Desenhar caule da tulipa
+      stroke(34, 139, 34); 
+      strokeWeight(10); 
+      line(200, 300, 200, 180);
+
+      // Desenhar folhas
+      fill(34, 139, 34);
+      noStroke();
+      ellipse(180, 230, 40, 80); // Folha esquerda
+      ellipse(220, 230, 40, 80); // Folha direita
+
+      // Desenhar pétalas
       fill(255, 0, 127);
       noStroke();
-      ellipse(200, 180, 50, 50); // Pétala superior
-      ellipse(180, 190, 50, 50); // Pétala esquerda
-      ellipse(220, 190, 50, 50); // Pétala direita
+      beginShape();
+      vertex(200, 150); // Topo da tulipa
+      bezierVertex(170, 170, 170, 200, 200, 200); // Lado esquerdo
+      bezierVertex(230, 200, 230, 170, 200, 150); // Lado direito
+      endShape(CLOSE);
+
+      beginShape();
+      vertex(200, 150); // Topo da tulipa
+      bezierVertex(180, 160, 190, 190, 200, 180); // Pétala do meio esquerda
+      bezierVertex(210, 190, 220, 160, 200, 150); // Pétala do meio direita
+      endShape(CLOSE);
+
+      // Adicionar sombra no centro
+      fill(220, 0, 100);
+      ellipse(200, 180, 30, 20);
     }
   </script>
 </body>
-</html>
+  </html>
+  
