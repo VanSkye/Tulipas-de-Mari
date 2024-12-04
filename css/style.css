@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffefd5, #ffe4e1);
+    text-align: center;
+    color: #4b0082;
+}
+.container {
+    margin-top: 50px;
+    padding: 20px;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.message {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+.flowers {
+    width: 100%;
+    height: 200px;
+    background: url('../images/flowers.png') repeat-x center;
+    animation: moveFlowers 20s linear infinite;
+}
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #8b008b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #9400d3;
+}
+@keyframes moveFlowers {
+    from { background-position: 0; }
+    to { background-position: 100%; }
+}
